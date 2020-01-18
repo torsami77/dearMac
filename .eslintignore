@@ -1,0 +1,10 @@
+node_modules/
+npm-debug.log
+.vscode/**
+.nyc_output/
+coverage
+build
+src/models
+src/migrations
+src/config
+src/seeders
