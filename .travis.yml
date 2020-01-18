@@ -7,7 +7,7 @@ node_js:
 
 env:
  global:
-    - export NODE_ENV=stage
+    - export NODE_ENV=test
 
 cache:
   directories:
@@ -17,9 +17,10 @@ before_install:
   - npm config set spin false
   - npm install -g standard
 
+script:
+  - npm test
+
 after_success:
 - nyc npm test
 - nyc npm test && nyc report --reporter=text-lcov | coveralls
 
-script:
-  - npm test

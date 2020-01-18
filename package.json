@@ -9,7 +9,14 @@
     "test": "nyc --reporter=html --reporter=text mocha --exit --require @babel/register --recursive ./test/",
     "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "serve": "node build/app.js",
-    "heroku-postbuild": "npm install"
+    "heroku-postbuild": "npm install",
+    "pre-test": "cross-env NODE_ENV=test npm run migrate && cross-env NODE_ENV=test npm run seed",
+    "undo-pre-test": "cross-env NODE_ENV=test npm run undo-migrate",
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "undo-migrate": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "seed": "node_modules/.bin/sequelize db:seed:all",
+    "undo-seed": "node_modules/.bin/sequelize db:seed:undo:all",
+    "lint": "node_modules/.bin/eslint --fix src/**/*.js"
   },
   "keywords": [
     "connecting",
@@ -33,7 +40,9 @@
     "eslint-plugin-react": "^7.12.4",
     "mocha": "^5.2.0",
     "nodemon": "^1.19.0",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "sequelize-test-helpers": "^1.2.2",
+    "sinon-chai": "^3.4.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -49,8 +58,11 @@
     "jsonwebtoken": "^8.4.0",
     "multer": "^1.4.1",
     "nodemailer": "^6.2.1",
-    "pg": "^7.7.0",
-    "request": "^2.88.0"
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "request": "^2.88.0",
+    "sequelize": "^5.21.3",
+    "sinon": "^8.1.0"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -72,10 +84,18 @@
       "./*.js"
     ],
     "exclude": [
-      "**/node_modules/**",
+      "**/.nyc_output/**",
+      "**/build/**",
       "**/coverage/**",
-      "**/ui/**",
-      "**/build/**"
+      "**/node_modules/**",
+      "**src/migrations/**",
+      "**src/seeders/**",
+      "**src/config/**",
+      "**src/models/index.js/**",
+      "**src/app.js/**",
+      "**/src/utils/emailTemplates/**",
+      "**src/test/**",
+      "**/ui/**"
     ],
     "all": true
   },
