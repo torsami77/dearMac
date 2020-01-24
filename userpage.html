@@ -76,32 +76,34 @@
 				</a>
             </div>
 			
-			<div class="user-side-bar-section">
-				<p class="user-side-bar-item"><a href="#"><i class="fa fa-chain right-space"></i> My Connections</a></p>
-				<p class="user-side-bar-item"><a href="#"><i class="fa fa-camera right-space"></i> My Pictures</a></p>
-				<p class="user-side-bar-item"><a href="#"><i class="fa fa-pencil right-space"></i> Modify My Bio-data</a></p>
-				<p class="user-side-bar-item"><a href="#"><i class="fa fa-lock right-space"></i> Change My Password</a></p>
+			<div class="user-side-bar-section" id="user-side-bar">
+                
 			</div>
         </header>
 		
-		<div class="user-sub-section">
+		<div class="user-sub-section" >
 			<div class="menu-header">
 				<div class="menu-header-item">
-					<a href="#"><img class="icon" src="img/profile_pic.jpg" /></a>
+					<a href="#" onclick="changeDashBoard('persona')"><img class="icon" src="img/profile_pic.jpg" /></a>
 				</div>
 				<div class="menu-header-item text-icon">
-					<a href="#">sign out</a>
+					<a href="#" >sign out</a>
 				</div>
 				<div class="menu-header-item text-icon">
-					<a href="#"><i class="fa fa-search"></i> search</a>
+					<a href="#" onclick="changeDashBoard('narrowSearch')"><i class="fa fa-search"></i> search</a>
 				</div>
 				<div class="menu-header-item">
 					<a href="#"><img class="icon" src="img/alert_icon.jpg"/></a>
 				</div>
-			</div>
-			<div class="">
-			</div>
-		</div>
+            </div>
+            
+			
+            <div class="user-page-main" id="user-page-main">
+               
+            </div>
+        </div>
+        
+      
 		
 
     
@@ -128,7 +130,11 @@
         <script src="js/wow.min.js"></script>
         <script src="js/jquery.justifiedGallery.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
-		<script src="js/htmlVariables.js"></script>
+        <script src="js/htmlVariables.js"></script>
+        <script src="js/htmlVariables2.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            changeDashBoard('narrowSearch');
+        </script>
     </body>
 </html>

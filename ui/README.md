@@ -1,2 +1,0 @@
-# dearMac
-Connecting Professionals
