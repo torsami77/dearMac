@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/middlewares/index.js"],"names":["validate","Authenticate"],"mappings":";;;;;;;AAAA;;AACA;;;;eAEe;AACbA,EAAAA,QAAQ,EAARA,iBADa;AAEbC,EAAAA,YAAY,EAAZA;AAFa,C","sourcesContent":["import validate from './validate';\nimport Authenticate from './authenticate';\n\nexport default {\n  validate,\n  Authenticate\n};\n"],"file":"index.js"}

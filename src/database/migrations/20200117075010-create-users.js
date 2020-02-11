@@ -11,13 +11,13 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      mobile: {
+      mobile_number: {
         type: Sequelize.STRING
       },
       first_name: {
         type: Sequelize.STRING
       },
-      second_name: {
+      last_name: {
         type: Sequelize.STRING
       },
       gender: {

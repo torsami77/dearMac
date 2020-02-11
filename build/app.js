@@ -15,6 +15,8 @@ var _cookieParser = _interopRequireDefault(require("cookie-parser"));
 
 var _path = _interopRequireDefault(require("path"));
 
+var _routes = _interopRequireDefault(require("./routes"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _dotenv.config)();
@@ -45,7 +47,8 @@ const isProduction = process.env.NODE_ENV === 'production'; // base route respon
 
 app.get('/', (req, res) => {
   res.sendFile(_path.default.resolve('./ui/index.html'));
-}); // catch 404 and forward to error handler
+});
+app.use('/api/v1/', _routes.default); // catch 404 and forward to error handler
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
@@ -82,3 +85,4 @@ app.listen(PORT, () => {
 });
 var _default = app;
 exports.default = _default;
+//# sourceMappingURL=app.js.map

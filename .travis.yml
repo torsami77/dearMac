@@ -17,6 +17,10 @@ before_install:
   - npm config set spin false
   - npm install -g standard
 
+before_script:
+  - npx sequelize-cli db:migrate:undo
+  - npx sequelize-cli db:migrate
+
 script:
   - npm test
 
