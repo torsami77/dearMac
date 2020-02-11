@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import router from './routes';
 
 config();
 
@@ -27,11 +28,12 @@ app.use(express.static('./ui'));
 app.use(cookieParser());
 
 const isProduction = process.env.NODE_ENV === 'production';
-
 // base route response
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('./ui/index.html'));
 });
+
+app.use('/api/v1/', router);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

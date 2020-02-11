@@ -2,9 +2,9 @@
 module.exports = (sequelize, DataTypes) => {
   const users = sequelize.define('users', {
     email: DataTypes.STRING,
-    mobile: DataTypes.STRING,
+    mobile_number: DataTypes.STRING,
     first_name: DataTypes.STRING,
-    second_name: DataTypes.STRING,
+    last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     marital_status: DataTypes.STRING,
     date_of_birth: DataTypes.STRING,
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
 
   users.associate = (models) => {
-    users.hasMany(models.Requests, { as: 'userRequests', foreignKey: 'requester_id' });
+    users.hasMany(models.requests, { as: 'userRequests', foreignKey: 'requester_id' });
   };
   return users;
 };

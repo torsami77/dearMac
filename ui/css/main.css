@@ -12,6 +12,25 @@
 
 @import url(https://fonts.googleapis.com/css?family=Volkhov:400italic);
 
+.iti__flag {background-image: image-url("./intl-tel-input-master/build/img/flags,png");}
+    
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.iti__flag {background-image: image-url("./intl-tel-input-master/build/img/flags@2x.png");}
+}
+
+.iti__country {
+	float: left !important;
+text-align: left !important;
+background-color: #333333 !important;
+width: 450px !important;
+overflow: none;
+}
+
+
+.iti__country:hover {
+background-color: black !important;
+}
+
 body {
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -22,18 +41,29 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.centered-align {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.left-align {
+  text-align: left;
+  padding-left: 20%;
+}
+
 .customised-button-b {
 	background-color: #000000;
-    border: 2px solid orange;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
+  border: 2px solid orange;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 	width: 200px;
 }
 
@@ -51,7 +81,7 @@ body {
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-blouser-page-mainck;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
@@ -141,6 +171,48 @@ body {
 	width: 60%;
 }
 
+.user-page-main {
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+	border: 2px solid #88888888;
+	border-radius: 8px;
+  text-align: center !important;
+}
+
+.cart {
+  float: left;
+  margin: 10px 10px;
+}
+
+.cart-caption {
+  padding-top: 20px;
+  height: 90px;
+  background-color: rgb(200, 200, 200, 0.5);
+  margin-top: 100px;
+  font-weight: bold;
+  color: black;
+}
+
+.cart-image {
+  width: 150px;
+  height: 200px;;
+}
+
+.cart-image-album {
+  width: 300px;
+  height: 300px;;
+}
+
+.cart-image:hover {
+  width: 149px;
+  height: 200px;;
+}
+
+.cart:hover {
+  border: 2px solid orange;
+}
+
 .menu-header {
 	margin-top: 15px;
 	border: 2px solid #88888888;
@@ -167,6 +239,32 @@ body {
 	color: orange;
 }
 
+.show-profile-pic {
+  width: 300px;
+  height: 250px;
+}
+
+.circled-button {
+  background-color: #88888888;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.standing-button {
+  background-color: #88888888;
+  width: 20px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 10px;
+}
+
+
 .icon {
 	width: 50px;
 	height: 50px;
@@ -178,26 +276,38 @@ body {
 
 button {
 	background-color: orange; 
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 	width: 200px;
 }
 
 button:hover {
 	background-color: #ff8c00;
-    outline: none;
-    border: 2px solid orange;
+  outline: none;
+  border: 2px solid orange;
 	padding: 8px;
 }
 
+button:active {
+  background-color: darkgoldenrod;
+}
+
+.thumpnail {
+  width: 30;
+  height: 50px;
+}
+
+.thumpnail:hover {
+  border: 2px solid orange;
+}
 
 .memberArea {
 	z-index: 16777271;
@@ -223,30 +333,49 @@ button:hover {
 	border: solid 2px white;
 }
 
+.resized-text-field {
+  width: 80px !important;
+}
+
 .form-text-field {
-    background-color: #333333; 
-    border: none;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
+  background-color: #333333; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 	width: 200px;
 }
 
+.form-info-field {
+  background-color: #333333; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 250px;
+  overflow: hidden;
+}
+
 .form-text-field:focus {
-    background-color: #000000;
-    outline: none;
-    border: 2px solid orange;
+  background-color: #000000;
+  outline: none;
+  border: 2px solid orange;
 	padding: 8px;
 }
 
 .form-text-field:hover {
-    outline: none;
-    border: 2px solid orange;
+  outline: none;
+  border: 2px solid orange;
 	padding: 8px;
 }
 
@@ -272,7 +401,7 @@ a, a:focus, a:hover {
 a:focus, a:hover {
     color: inherit;
 }
-
+Modify My Bio-data
 h1, h2, h3,
 h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
@@ -1755,4 +1884,28 @@ button.btn.btn-theme-color:hover{
           transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
   -webkit-animation: 2s preload-cycle-6 linear infinite both;
           animation: 2s preload-cycle-6 linear infinite both;
+}
+
+
+
+input:focus::-webkit-input-placeholder {
+  color: #555555;
+}
+
+/* Firefox < 19 */
+
+input:focus:-moz-placeholder {
+  color: #555555;
+}
+
+/* Firefox > 19 */
+
+input:focus::-moz-placeholder {
+  color: #555555;
+}
+
+/* Internet Explorer 10 */
+
+input:focus:-ms-input-placeholder {
+  color: #555555;
 }
